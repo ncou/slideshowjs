@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/SlideShow.css">
+	</head>
+	<body>
+		<div id="controls">
+			<button id="prevBtn">Back</button>
+			<button id="stopBtn">stop</button>
+			<button id="startBtn">start</button>
+		</div>
+		<div id="slideDeck">
+			<div class="slide">
+				<h2>Hello World</h2>
+				<p>1</p>
+			</div>
+			<div class="slide">
+				<h2>Hello World</h2>
+				<p>2</p>
+			</div>
+			
+			<div class="slide">
+				<h2>Hello World</h2>
+				<p>3</p>
+			</div>
+			<div class="slide">
+				<h2>Hello World</h2>
+				<p>4</p>
+			</div>
+			<div class="slide">
+				<h2>Hello World</h2>
+				<p>5</p>
+			</div>
+		</div>
+		
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/SlideShow.js"></script>
+	<script>
+		$(function(){
+			SlideShow.initialize();
+			
+			SlideShow.addEventListener('SlideChanged', function(event){				
+			}, false);
+			
+			$("#stopBtn").on('click', function(){
+				SlideShow.stop();
+			});
+
+			$("#startBtn").on('click', function(){
+				SlideShow.start();
+			});
+			
+			$("#prevBtn").on('click', function(){
+				SlideShow.previous();
+			});
+		});
+	</script>
+	</body>
+</html>
