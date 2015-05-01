@@ -1,0 +1,17 @@
+.slide {
+	margin: auto;
+	overflow: visible;
+	z-index: 1;
+	text-align: center;
+}
+
+.slide img{
+	border:none;
+}
+
+.past{
+	display:none;
+}
+.present{
+	display:block;
+}
