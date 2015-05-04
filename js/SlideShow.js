@@ -123,7 +123,6 @@
 				
 		dom.slides = document.querySelectorAll(settings.slideClass);		
 		
-		console.log(dom.slides.length)
 		_slideIdx = 0;	
 	};
 
