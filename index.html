@@ -1,44 +1,67 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/SlideShow.css">
 	</head>
 	<body>
-		<div id="controls">
-			<button id="prevBtn">Back</button>
-			<button id="stopBtn">stop</button>
-			<button id="startBtn">start</button>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="images/CompanyLogo.png"/>
+				</div>
+				<div class="col-md-6">
+					<div id="controls">
+						<button id="prevBtn">Back</button>
+						<button id="stopBtn">stop</button>
+						<button id="startBtn">start</button>
+						<button id="nextBtn">Next</button>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div id="slideDeck">
+						<div class="slide">
+							<h2>Hello World</h2>
+							<p>1</p>
+						</div>
+						<div class="slide">
+							<h2>Hello World</h2>
+							<img src ="images/Jellyfish.jpg"/>
+						</div>
+						
+						<div class="slide">
+							<h2>Hello World</h2>
+							<img src ="images/Hydrangeas.jpg"/>
+						</div>
+						<div class="slide">
+							<h2>Hello World</h2>
+							<img src ="images/Koala.jpg"/>
+						</div>
+						<div class="slide">
+							<h2>Hello World</h2>
+							<p>5</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div id="slideDeck">
-			<div class="slide">
-				<h2>Hello World</h2>
-				<p>1</p>
-			</div>
-			<div class="slide">
-				<h2>Hello World</h2>
-				<p>2</p>
-			</div>
-			
-			<div class="slide">
-				<h2>Hello World</h2>
-				<p>3</p>
-			</div>
-			<div class="slide">
-				<h2>Hello World</h2>
-				<p>4</p>
-			</div>
-			<div class="slide">
-				<h2>Hello World</h2>
-				<p>5</p>
-			</div>
+		<div style="position:absolute; bottom:0px; left:0px; width:100%;">
+			<p style="text-align: center;">Some footer here</p>
 		</div>
-		
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="js/SlideShow.js"></script>
 	<script>
 		$(function(){
 			SlideShow.initialize();
 			
-			SlideShow.addEventListener('SlideChanged', function(event){				
+			SlideShow.addEventListener('SlideChanged', function(event){	
+				console.log('Slide Changed');			
 			}, false);
 			
 			$("#stopBtn").on('click', function(){
@@ -46,11 +69,16 @@
 			});
 
 			$("#startBtn").on('click', function(){
+				console.log('I get is called');
 				SlideShow.start();
 			});
 			
 			$("#prevBtn").on('click', function(){
 				SlideShow.previous();
+			});
+			
+			$("#nextBtn").on('click', function(){
+				SlideShow.next();
 			});
 		});
 	</script>
