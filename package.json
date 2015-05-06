@@ -1,0 +1,19 @@
+{
+  "name": "slideshow.js",
+  "version": "1.0.0",
+  "description": "A simple HTML Presentation Framework",
+  "main": "js/SlideShow.js",
+  "author": {
+    "name": "Scott Sloan",
+    "email": "scott.sloan@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/devscott/slideshowjs.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
