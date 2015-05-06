@@ -1,3 +1,8 @@
+#slideDeck img{
+	max-height: 100%;
+	max-width: 100%;
+}
+
 .slide {
 	margin: auto;
 	overflow: visible;
@@ -12,6 +17,7 @@
 .past{
 	display:none;
 }
+
 .present{
 	display:block;
 }
