@@ -1,17 +1,17 @@
-#slideDeck img{
-	max-height: 100%;
-	max-width: 100%;
+#slideDeck{
+    text-align: center;
 }
 
 .slide {
 	margin: auto;
-	overflow: visible;
-	z-index: 1;
+	overflow: hidden;
 	text-align: center;
+	height: inherit;
 }
 
 .slide img{
 	border:none;
+	height: inherit;
 }
 
 .past{
